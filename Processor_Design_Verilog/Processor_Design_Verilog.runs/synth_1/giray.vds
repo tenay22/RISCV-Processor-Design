@@ -1,0 +1,300 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Fri Oct 23 23:45:51 2026
+# Process ID         : 2440
+# Current directory  : C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.runs/synth_1
+# Command line       : vivado.exe -log giray.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source giray.tcl
+# Log file           : C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.runs/synth_1/giray.vds
+# Journal file       : C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-615L4V2
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+# CPU Frequency      : 2304 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 8
+# Host memory        : 16974 MB
+# Swap memory        : 6468 MB
+# Total Virtual      : 23443 MB
+# Available Virtual  : 1909 MB
+#-----------------------------------------------------------
+source giray.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.srcs/utils_1/imports/synth_1/giray.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.srcs/utils_1/imports/synth_1/giray.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top giray -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12804
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 849.730 ; gain = 473.211
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'giray' [C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.srcs/sources_1/new/giray.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.srcs/sources_1/new/giray.v:236]
+INFO: [Synth 8-6155] done synthesizing module 'giray' (0#1) [C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.srcs/sources_1/new/giray.v:3]
+WARNING: [Synth 8-6014] Unused sequential element alu_result_reg was removed.  [C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.srcs/sources_1/new/giray.v:129]
+WARNING: [Synth 8-6014] Unused sequential element val_mem_reg was removed.  [C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.srcs/sources_1/new/giray.v:252]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 979.699 ; gain = 603.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 979.699 ; gain = 603.180
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 979.699 ; gain = 603.180
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'stage_reg' in module 'giray'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   FETCH |                               00 |                               00
+                  DECODE |                               01 |                               01
+                 EXECUTE |                               10 |                               10
+               WRITEBACK |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'stage_reg' using encoding 'sequential' in module 'giray'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 979.699 ; gain = 603.180
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 13    
+	   3 Input   32 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 45    
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 22    
+	   3 Input   32 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 4     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 10    
+	   5 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 7     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	  31 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 72    
+	   5 Input    1 Bit        Muxes := 7     
+	   4 Input    1 Bit        Muxes := 49    
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP data_mem_wdata_o1, operation Mode is: A2*B.
+DSP Report: register data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: operator data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: operator data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: Generating DSP data_mem_wdata_o1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: operator data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: Generating DSP data_mem_wdata_o1, operation Mode is: A2*B2.
+DSP Report: register data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: register data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: operator data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: operator data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: Generating DSP data_mem_wdata_o1, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: operator data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+DSP Report: operator data_mem_wdata_o1 is absorbed into DSP data_mem_wdata_o1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1291.117 ; gain = 914.598
+---------------------------------------------------------------------------------
+ Sort Area is  data_mem_wdata_o1_0 : 0 0 : 3137 5933 : Used 1 time 0
+ Sort Area is  data_mem_wdata_o1_0 : 0 1 : 2796 5933 : Used 1 time 0
+ Sort Area is  data_mem_wdata_o1_3 : 0 0 : 2777 5436 : Used 1 time 0
+ Sort Area is  data_mem_wdata_o1_3 : 0 1 : 2659 5436 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|giray       | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|giray       | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|giray       | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|giray       | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:39 . Memory (MB): peak = 1291.117 ; gain = 914.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1291.746 ; gain = 915.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:40 ; elapsed = 00:00:48 . Memory (MB): peak = 1370.859 ; gain = 994.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1370.859 ; gain = 994.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1370.859 ; gain = 994.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1370.859 ; gain = 994.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1370.859 ; gain = 994.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1370.859 ; gain = 994.340
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|giray       | A'*B'          | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|giray       | A'*B'          | 17     | 17     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|giray       | PCIN>>17+A'*B' | 17     | 15     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   152|
+|3     |DSP48E1 |     3|
+|4     |LUT1    |    53|
+|5     |LUT2    |   370|
+|6     |LUT3    |   239|
+|7     |LUT4    |   376|
+|8     |LUT5    |   513|
+|9     |LUT6    |  1370|
+|10    |MUXF7   |   262|
+|11    |MUXF8   |    10|
+|12    |FDRE    |  1342|
+|13    |IBUF    |    66|
+|14    |OBUF    |  1123|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  5880|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1370.859 ; gain = 994.340
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1370.859 ; gain = 994.340
+Synthesis Optimization Complete : Time (s): cpu = 00:00:41 ; elapsed = 00:00:48 . Memory (MB): peak = 1370.859 ; gain = 994.340
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 1386.176 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 427 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'giray' is not ideal for floorplanning, since the cellview 'giray' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1502.348 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 82d0cfac
+INFO: [Common 17-83] Releasing license: Synthesis
+21 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 1502.348 ; gain = 1132.324
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1502.348 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/HP/Desktop/Verilog/Bil361_HW/Bil361_HW.runs/synth_1/giray.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file giray_utilization_synth.rpt -pb giray_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 23 23:46:56 2026...
